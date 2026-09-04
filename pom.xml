@@ -24,15 +24,10 @@
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
-        <!-- Method 1: The Official Upstream CI Server -->
+        <!-- Local Library Directory -->
         <repository>
-            <id>nametagedit-repo</id>
-            <url>https://ci.nametagedit.com/plugin/repository/everything/</url>
-        </repository>
-        <!-- Method 2: GitHub compiler fallback via JitPack -->
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
+            <id>local-libs</id>
+            <url>file://${project.basedir}/libs</url>
         </repository>
     </repositories>
 
@@ -94,19 +89,10 @@
             <version>3.12.0</version>
         </dependency>
 
-        <!-- Server Dependency Configuration -->
+        <!-- NametagEdit - Local Library -->
         <dependency>
             <groupId>com.nametagedit</groupId>
             <artifactId>nametagedit</artifactId>
-            <version>4.0.5</version>
-            <scope>provided</scope>
-            <optional>true</optional>
-        </dependency>
-
-        <!-- GitHub Dependency Configuration - JitPack fallback -->
-        <dependency>
-            <groupId>com.github.sgtcaze</groupId>
-            <artifactId>NametagEdit</artifactId>
             <version>4.0.5</version>
             <scope>provided</scope>
             <optional>true</optional>
