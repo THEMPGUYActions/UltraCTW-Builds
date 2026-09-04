@@ -24,6 +24,16 @@
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
+        <!-- Method 1: The Official Upstream CI Server -->
+        <repository>
+            <id>nametagedit-repo</id>
+            <url>https://ci.nametagedit.com/plugin/repository/everything/</url>
+        </repository>
+        <!-- Method 2: GitHub compiler fallback via JitPack -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <build>
@@ -84,13 +94,22 @@
             <version>3.12.0</version>
         </dependency>
 
-        <!-- NameTagEdit - Local JAR from libs folder -->
+        <!-- Server Dependency Configuration -->
         <dependency>
             <groupId>com.nametagedit</groupId>
             <artifactId>nametagedit</artifactId>
-            <version>4.5.23</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/NametagEdit-4.5.23.jar</systemPath>
+            <version>4.0.5</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- GitHub Dependency Configuration - JitPack fallback -->
+        <dependency>
+            <groupId>com.github.sgtcaze</groupId>
+            <artifactId>NametagEdit</artifactId>
+            <version>4.0.5</version>
+            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
 
         <!-- Lombok -->
