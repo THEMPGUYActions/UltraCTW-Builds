@@ -14,10 +14,15 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-        <!-- ExtendedClip Repository for NameTagEdit -->
+        <!-- ExtendedClip Repository for PlaceholderAPI -->
         <repository>
             <id>extendedclip</id>
             <url>https://repo.extendedclip.com/releases/</url>
+        </repository>
+        <!-- Maven Central -->
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
         </repository>
     </repositories>
 
@@ -31,6 +36,20 @@
                     <source>8</source>
                     <target>8</target>
                 </configuration>
+            </plugin>
+            <!-- Maven Assembly Plugin to shade dependencies -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -65,12 +84,13 @@
             <version>3.12.0</version>
         </dependency>
 
-        <!-- NameTagEdit -->
+        <!-- NameTagEdit - Local JAR from libs folder -->
         <dependency>
             <groupId>com.nametagedit</groupId>
             <artifactId>nametagedit</artifactId>
-            <version>4.0.5</version>
-            <scope>provided</scope>
+            <version>4.5.23</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/NametagEdit-4.5.23.jar</systemPath>
         </dependency>
 
         <!-- Lombok -->
