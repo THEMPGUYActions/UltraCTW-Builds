@@ -91,7 +91,7 @@
             <version>1.0</version>
             <scope>provided</scope>
             <optional>true</optional>
-            <systemPath>${project.basedir}/libs/NameTagEdit.jar</systemPath>
+            <systemPath>${project.basedir}/libs/NametagEdit.jar</systemPath>
         </dependency>
 
         <!-- Lombok -->
