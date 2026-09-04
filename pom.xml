@@ -89,7 +89,7 @@
             <groupId>com.nametagedit</groupId>
             <artifactId>NameTagEdit</artifactId>
             <version>1.0</version>
-            <scope>provided</scope>
+            <scope>system</scope>
             <optional>true</optional>
             <systemPath>${project.basedir}/libs/NametagEdit.jar</systemPath>
         </dependency>
