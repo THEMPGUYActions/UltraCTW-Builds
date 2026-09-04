@@ -29,11 +29,6 @@
             <id>codemc-public</id>
             <url>https://repo.codemc.io/repository/maven-public/</url>
         </repository>
-        <!-- JitPack for alternative sources and legacy dependencies -->
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
         <!-- Maven Central -->
         <repository>
             <id>central</id>
@@ -148,11 +143,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Holograms API - Using JitPack for better availability -->
+        <!-- Holograms API - Available on Maven Central as com.sainttx.holograms -->
         <dependency>
-            <groupId>com.github.sainttx</groupId>
-            <artifactId>Holograms</artifactId>
-            <version>1.2.5</version>
+            <groupId>com.sainttx.holograms</groupId>
+            <artifactId>holograms-api</artifactId>
+            <version>2.13</version>
             <scope>provided</scope>
         </dependency>
 
