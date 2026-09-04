@@ -24,11 +24,6 @@
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
-        <!-- Local Library Directory -->
-        <repository>
-            <id>local-libs</id>
-            <url>file://${project.basedir}/libs</url>
-        </repository>
     </repositories>
 
     <build>
@@ -89,13 +84,14 @@
             <version>3.12.0</version>
         </dependency>
 
-        <!-- NametagEdit - Latest SpigotMC Version from Local Library -->
+        <!-- NametagEdit - Local JAR -->
         <dependency>
             <groupId>com.nametagedit</groupId>
-            <artifactId>nametagedit</artifactId>
-            <version>4.5.23</version>
+            <artifactId>NameTagEdit</artifactId>
+            <version>1.0</version>
             <scope>provided</scope>
             <optional>true</optional>
+            <systemPath>${project.basedir}/libs/NameTagEdit.jar</systemPath>
         </dependency>
 
         <!-- Lombok -->
